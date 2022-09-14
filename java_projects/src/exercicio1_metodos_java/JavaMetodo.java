@@ -7,7 +7,7 @@ import static exercicio1_metodos_java.saudacaoJava.greetingJava;
 public class JavaMetodo {
     public static void main(String[] args) {
 
-        Scanner scan = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
         Operacao operacao = new Operacao();
 
         int i;
@@ -21,13 +21,13 @@ public class JavaMetodo {
         System.out.println("Multiplicação(3)");
         System.out.println("Divisão(4)");
 
-        i = scan.nextInt();
+        i = scanner.nextInt();
 
         if (i == 1 || i == 2 || i == 3 || i == 4) {
             System.out.println("Digite os dois números a serem usados:");
             int a, b;
-           a = scan.nextInt();
-           b = scan.nextInt();
+           a = scanner.nextInt();
+           b = scanner.nextInt();
            System.out.println("resultado: ");
 
             if (i == 1){
@@ -49,15 +49,40 @@ public class JavaMetodo {
 
 
         System.out.println("Deseja fazer um empréstimo?(Y/N)");
-        confirmation = scan.next();
+        confirmation = scanner.next();
         if (confirmation.equals("Y") || confirmation.equals("y")) {
+
+
+            int valorEmprestimo;
+            int parcelas;
+            float juros;
+            
+
+            System.out.println("Qual o valor desejado?");
+            valorEmprestimo = scanner.nextInt();
+
+            System.out.println("Quantas parcelas desejadas?");
+            parcelas = scanner.nextInt();
+
+            if (parcelas >= 1 && parcelas <= 6)
+            {
+                juros = 0.01f;
+            }else if (parcelas >= 7 && parcelas <= 12)
+            {
+                juros = 0.015f;
+            }else {
+                juros = 0.025f;
+            }
+
+
+
             emprestimoJava emprestimo = new emprestimoJava();
-            emprestimo.emprestimoCalculo();
+            emprestimo.emprestimoCalculo(valorEmprestimo, parcelas, juros);
         }else{
             greetingJava();
             System.out.println("Encerrando...");
         }
 
-        scan.close();
+        scanner.close();
     }
 }
