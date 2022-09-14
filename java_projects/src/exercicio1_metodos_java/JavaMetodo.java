@@ -1,9 +1,7 @@
 package exercicio1_metodos_java;
 
-import java.util.Calendar;
 import java.util.Scanner;
 
-import static exercicio1_metodos_java.consoleClear.clearConsole;
 import static exercicio1_metodos_java.saudacaoJava.greetingJava;
 
 public class JavaMetodo {
@@ -12,7 +10,7 @@ public class JavaMetodo {
         Scanner scan = new Scanner(System.in);
         Operacao operacao = new Operacao();
 
-        int i = 0;
+        int i;
         String confirmation;
 
         greetingJava();
@@ -46,14 +44,9 @@ public class JavaMetodo {
         }
 
         System.out.println("--------------------------------");
-        System.out.println("Deseja limpar o console?(Y/N)");
-        confirmation = scan.next();
+        System.out.println("|------------------------------|");
+        System.out.println("--------------------------------");
 
-        if (confirmation.equals("Y") || confirmation.equals("y")) {
-            clearConsole();
-        }else {
-            System.out.println("--------------------------------");
-        }
 
         System.out.println("Deseja fazer um empréstimo?(Y/N)");
         confirmation = scan.next();

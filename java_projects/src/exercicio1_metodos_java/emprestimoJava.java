@@ -35,6 +35,7 @@ public class emprestimoJava {
         System.out.println("Valor desejado: " + valorEmprestimo);
         System.out.println("Quantas parcelas: " + parcelas);
         System.out.println(("Valor dos juros: " + new DecimalFormat("#,###.##").format(valorJuros)));
+
     }
 
 
