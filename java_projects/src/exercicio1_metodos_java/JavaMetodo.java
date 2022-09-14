@@ -56,7 +56,7 @@ public class JavaMetodo {
             int valorEmprestimo;
             int parcelas;
             float juros;
-            
+
 
             System.out.println("Qual o valor desejado?");
             valorEmprestimo = scanner.nextInt();
