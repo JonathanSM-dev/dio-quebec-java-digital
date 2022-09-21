@@ -37,5 +37,7 @@ public class listPerguntas {
 
         //System.out.println(verificacao);
 
+        scan.close();
+
     }
 }
